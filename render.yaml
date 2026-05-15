@@ -2,7 +2,7 @@ services:
   - type: web
     name: n8n
     runtime: image
-    repo: https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME
+    repo: https://github.com/abhinayagarikapati21/my-n8n-on-render
     plan: free
     envVars:
       - key: N8N_HOST
