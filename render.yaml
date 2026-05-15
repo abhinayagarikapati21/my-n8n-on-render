@@ -2,17 +2,17 @@ services:
   - type: web
     name: n8n
     runtime: image
-    repo: https://github.com/abhinayagarikapati21/my-n8n-on-render
+    image:
+      url: n8nio/n8n:latest
     plan: free
     envVars:
       - key: N8N_HOST
-        value: your-service-name.onrender.com
+        value: n8n.onrender.com
       - key: WEBHOOK_URL
-        value: https://your-service-name.onrender.com
+        value: https://n8n.onrender.com
       - key: N8N_PROTOCOL
         value: https
-      # This helps prevent crashes on the free tier's limited memory
+      - key: N8N_SECURE_COOKIE
+        value: "false"
       - key: NODE_OPTIONS
         value: --max-old-space-size=400
-    image:
-      url: n8nio/n8n:latest
